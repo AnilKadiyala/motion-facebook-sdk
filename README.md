@@ -5,10 +5,10 @@ This example covers most basic Facebook functionality, and is a direct 1-1 port 
 
 What it covers:
 ---------------
--combines use of FBLoginView, 
--FBProfilePictureView, 
--FBFriendsPickerViewController, 
--and FBRequest for profile access, status updates and photo uploading.
+1. combines use of FBLoginView, 
+2. FBProfilePictureView, 
+3. FBFriendsPickerViewController, 
+4. and FBRequest for profile access, status updates and photo uploading.
 
 
 From Scratch Installation Steps (or, what I did to get it to work):
