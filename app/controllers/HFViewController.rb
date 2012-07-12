@@ -1,4 +1,3 @@
-
 class HFViewController < UIViewController
 	
 	TAG_POST_STATUS = 1
@@ -7,38 +6,37 @@ class HFViewController < UIViewController
 	TAG_TITLE = 4
 	TAG_IMAGE = 5
 
-    def viewDidLoad
+    	def viewDidLoad
+    	     @buttonPostStatus = self.view.viewWithTag TAG_POST_STATUS
+    	     @buttonPostPhoto = self.view.viewWithTag TAG_POST_PHOTO
+    	     @buttonPickFriends = self.view.viewWithTag TAG_PICK_FRIENDS
+    	     @labelFirstName = self.view.viewWithTag TAG_TITLE
+    	     @profilePic = self.view.viewWithTag TAG_IMAGE
 
-    	@buttonPostStatus = self.view.viewWithTag TAG_POST_STATUS
-    	@buttonPostPhoto = self.view.viewWithTag TAG_POST_PHOTO
-    	@buttonPickFriends = self.view.viewWithTag TAG_PICK_FRIENDS
-    	@labelFirstName = self.view.viewWithTag TAG_TITLE
-    	@profilePic = self.view.viewWithTag TAG_IMAGE
-
-    	@buttonPostStatus.addTarget( self, action: 'postStatusUpdateClick:', forControlEvents: UIControlEventTouchUpInside )
-    	@buttonPostPhoto.addTarget( self, action: 'postPhotoClick:', forControlEvents: UIControlEventTouchUpInside )
-    	@buttonPickFriends.addTarget( self, action: 'pickFriendsClick:', forControlEvents: UIControlEventTouchUpInside )
+    	     @buttonPostStatus.addTarget( self, action: 'postStatusUpdateClick:', forControlEvents: UIControlEventTouchUpInside )
+    	     @buttonPostPhoto.addTarget( self, action: 'postPhotoClick:', forControlEvents: UIControlEventTouchUpInside )
+    	     @buttonPickFriends.addTarget( self, action: 'pickFriendsClick:', forControlEvents: UIControlEventTouchUpInside )
     	
-	    # Create Login View so that the app will be granted "status_update" permission.
-	    loginview = FBLoginView.alloc.initWithPermissions( ["status_update"] )
+	     # Create Login View so that the app will be granted "status_update" permission.
+	     loginview = FBLoginView.alloc.initWithPermissions( ["status_update"] )
 	    
-	    loginview.frame = CGRectOffset(loginview.frame, 5, 5)
-	    loginview.delegate = self;
+	     loginview.frame = CGRectOffset(loginview.frame, 5, 5)
+	     loginview.delegate = self;
 	    
-	    self.view.addSubview( loginview )
-	end
+	     self.view.addSubview( loginview )
+    	end
 
-	def viewDidUnload 
-	    @buttonPickFriends = nil
-	    @buttonPostPhoto = nil
-	    @buttonPostStatus = nil
-	    
-	    # @labelFirstName = nil;
-	    @loggedInUser = nil;
-	    @profilePic = nil;
-    end
+    	def viewDidUnload 
+	     @buttonPickFriends = nil
+	     @buttonPostPhoto = nil
+	     @buttonPostStatus = nil
+	
+	     # @labelFirstName = nil;
+	     @loggedInUser = nil;
+	     @profilePic = nil;
+    	end
 
-  def shouldAutorotateToInterfaceOrientation( interfaceOrientation )
+	def shouldAutorotateToInterfaceOrientation( interfaceOrientation )
 	    # Return YES for supported orientations
 	    if UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone
 	        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown)
@@ -48,7 +46,7 @@ class HFViewController < UIViewController
 	end
 
 	def loginViewShowingLoggedInUser( loginView )
-    	# first get the buttons set for login mode
+    	    # first get the buttons set for login mode
 	    @buttonPostPhoto.enabled = true
 	    @buttonPostStatus.enabled = true
 	    @buttonPickFriends.enabled = true
@@ -89,15 +87,14 @@ class HFViewController < UIViewController
 	    # a specified completion handler.
 	    err = Pointer.new(:object)
 	    FBRequest.startWithGraphPath( "me/feed",
-				parameters:params,
-				HTTPMethod: "POST",
-		    completionHandler: lambda { |connection, result, error|
+				    parameters:params,
+				    HTTPMethod: "POST",
+				    completionHandler: lambda { |connection, result, error|
 					self.showAlert( message, result: result, error: error )
 					@buttonPostStatus.enabled = true
-				}
-			)
+				    })
 	        
-	    @buttonPostStatus.enabled = false; 
+	    @buttonPostStatus.enabled = false
 	end
 
 	# Post Photo button handler
@@ -134,10 +131,10 @@ class HFViewController < UIViewController
 	    
 	    friendPicker.navigationItem.rightBarButtonItem = UIBarButtonItem.alloc.initWithTitle( 
 	    	"Done",
-				style: UIBarButtonItemStyleBordered,
-				target: self,
-				action: "friendPickerDoneButtonWasPressed:" 
-			)
+		style: UIBarButtonItemStyleBordered,
+		target: self,
+		action: "friendPickerDoneButtonWasPressed:" 
+	    )
 
 	    friendPicker.navigationItem.hidesBackButton = false
 	    
@@ -170,17 +167,17 @@ class HFViewController < UIViewController
 	    end
 	    
 	    UIAlertView.alloc.initWithTitle( 
-		    	"You Picked:",
-				message: message,
-				delegate: nil,
-				cancelButtonTitle: "OK",
-				otherButtonTitles: nil).show()
+		"You Picked:",
+		message: message,
+		delegate: nil,
+		cancelButtonTitle: "OK",
+		otherButtonTitles: nil).show()
 	end
 
 	# UIAlertView helper for post buttons
 	def showAlert( message, result: result, error: error )
     	
-    	if error
+    	    if error
 	        alertMsg = error.localizedDescription
 	        alertTitle = "Error"
 	    else
@@ -191,14 +188,12 @@ class HFViewController < UIViewController
 
 	    alertView = UIAlertView.alloc.initWithTitle( 
 	    	alertTitle,
-			message:alertMsg,
-			delegate: nil,
+		message:alertMsg,
+		delegate: nil,
           	cancelButtonTitle: "OK",
-          	otherButtonTitles: nil 
-        )
+          	otherButtonTitles: nil )
 	    
 	    alertView.show()
 	end
-
 end
 
