@@ -2,7 +2,6 @@
 $:.unshift("/Library/RubyMotion/lib")
 
 require 'motion/project'
-require 'motion-cocoapods'
 
 Motion::Project::App.setup do |app|
   
