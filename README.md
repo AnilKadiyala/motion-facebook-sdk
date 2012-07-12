@@ -10,6 +10,10 @@ What it covers:
 3. FBFriendsPickerViewController, 
 4. and FBRequest for profile access, status updates and photo uploading.
 
+Objective-C reference (for comparison)
+---------------------------------------
+For reference to the Objective-C version, please see the folder https://github.com/damassi/Motion-FacebookSDK/tree/master/Objective-C-Version/HelloFacebookSample, but make sure you're wearing your shades ;)
+
 
 From Scratch Installation Steps (or, what I did to get it to work):
 -------------------------------------------------------------------
