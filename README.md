@@ -1,7 +1,7 @@
 iOS FacebookSDK (3.0 beta) for use with RubyMotion
 ==================================================
 
-This example covers most basic Facebook functionality, and is a direct 1-1 port of the HelloFacebook Objective-C sample located in the FacebookSDK `samples` directory.
+This example covers most basic Facebook functionality, and is a direct 1-1 port of the HelloFacebook Objective-C sample located in the FacebookSDK `samples` directory.  See https://developers.facebook.com/ios/ for more information.
 
 What it covers:
 ---------------
