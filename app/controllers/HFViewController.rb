@@ -142,8 +142,6 @@ class HFViewController < UIViewController
 	    self.navigationController.pushViewController( friendPicker, animated: true )
 	end
 
-	# TODO validate this type @"<No Friends Selected>";
-	# TODO validate type id<FBGraphUser>
 	# Handler for when friend picker is dismissed
 	def friendPickerDoneButtonWasPressed( sender )
 
