@@ -1,5 +1,4 @@
 
-
 class HFViewController < UIViewController
 	
 	TAG_POST_STATUS = 1
@@ -15,8 +14,6 @@ class HFViewController < UIViewController
     	@buttonPickFriends = self.view.viewWithTag TAG_PICK_FRIENDS
     	@labelFirstName = self.view.viewWithTag TAG_TITLE
     	@profilePic = self.view.viewWithTag TAG_IMAGE
-    	
-    	@loggedInUser 
 
     	@buttonPostStatus.addTarget( self, action: 'postStatusUpdateClick:', forControlEvents: UIControlEventTouchUpInside )
     	@buttonPostPhoto.addTarget( self, action: 'postPhotoClick:', forControlEvents: UIControlEventTouchUpInside )
