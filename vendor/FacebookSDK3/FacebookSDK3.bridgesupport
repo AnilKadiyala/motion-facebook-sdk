@@ -1,0 +1,1299 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant declared_type='NSString*' name='FBErrorHTTPStatusCodeKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorInnerErrorKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorLoginFailedOriginalErrorCode' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorLoginFailedReason' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorLoginFailedReasonInlineCancelledValue' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorLoginFailedReasonInlineNotCancelledValue' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorLoginFailedReasonUnitTestResponseUnrecognized' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorParsedJSONResponseKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorReauthorizeFailedReasonSessionClosed' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorReauthorizeFailedReasonUserCancelled' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBErrorReauthorizeFailedReasonWrongUser' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBGraphBasePath' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBInvalidOperationException' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBLogBehaviorAccessTokens' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBLogBehaviorFBRequests' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBLogBehaviorFBURLConnections' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBLogBehaviorPerformanceCharacteristics' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBLogBehaviorSessionStateTransitions' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBNonJSONResponseProperty' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBSessionDidSetActiveSessionNotification' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBSessionDidUnsetActiveSessionNotification' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBTokenInformationExpirationDateKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBTokenInformationIsFacebookLoginKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBTokenInformationPermissionsKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBTokenInformationRefreshDateKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBTokenInformationTokenKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBTokenInformationUserFBIDKey' const='true' type='@'/>
+<constant declared_type='NSString*' name='FBiOSSDKDomain' const='true' type='@'/>
+<constant declared_type='NSString*' name='kSecondTestUserTag' type='@'/>
+<constant declared_type='NSString*' name='kThirdTestUserTag' type='@'/>
+<enum name='FBErrorHTTPError' value='5'/>
+<enum name='FBErrorInvalid' value='0'/>
+<enum name='FBErrorLoginFailedOrCancelled' value='2'/>
+<enum name='FBErrorNonTextMimeTypeReturned' value='6'/>
+<enum name='FBErrorOperationCancelled' value='1'/>
+<enum name='FBErrorProtocolMismatch' value='4'/>
+<enum name='FBErrorRequestConnectionApi' value='3'/>
+<enum name='FBFriendDisplayByFirstName' value='0'/>
+<enum name='FBFriendDisplayByLastName' value='1'/>
+<enum name='FBFriendSortByFirstName' value='0'/>
+<enum name='FBFriendSortByLastName' value='1'/>
+<enum name='FBLoginViewStyleHorizontal' value='2'/>
+<enum name='FBLoginViewStyleSquareLarge' value='1'/>
+<enum name='FBLoginViewStyleSquareSmall' value='0'/>
+<enum name='FBProfilePictureCroppingOriginal' value='0'/>
+<enum name='FBProfilePictureCroppingSquare' value='1'/>
+<enum name='FBSessionLoginBehaviorForcingWebView' value='2'/>
+<enum name='FBSessionLoginBehaviorWithFallbackToWebView' value='0'/>
+<enum name='FBSessionLoginBehaviorWithNoFallbackToWebView' value='1'/>
+<enum name='FBSessionStateClosed' value='258'/>
+<enum name='FBSessionStateClosedLoginFailed' value='257'/>
+<enum name='FBSessionStateCreated' value='0'/>
+<enum name='FBSessionStateCreatedOpening' value='2'/>
+<enum name='FBSessionStateCreatedTokenLoaded' value='1'/>
+<enum name='FBSessionStateOpen' value='513'/>
+<enum name='FBSessionStateOpenTokenExtended' value='514'/>
+<enum name='FB_SESSIONSTATEOPENBIT' value='512'/>
+<enum name='FB_SESSIONSTATETERMINALBIT' value='256'/>
+<class name='FBCacheDescriptor'>
+<method selector='prefetchAndCacheForSession:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='FBFriendPickerViewController'>
+<method selector='allowsMultipleSelection'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='cacheDescriptor'>
+<retval declared_type='FBCacheDescriptor*' type='@'/>
+</method>
+<method class_method='true' selector='cacheDescriptorWithUserID:fieldsForRequest:'>
+<arg declared_type='NSString*' name='userID' index='0' type='@'/>
+<arg declared_type='NSSet*' name='fieldsForRequest' index='1' type='@'/>
+<retval declared_type='FBCacheDescriptor*' type='@'/>
+</method>
+<method selector='configureUsingCachedDescriptor:'>
+<arg declared_type='FBCacheDescriptor*' name='cacheDescriptor' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='displayOrdering'>
+<retval declared_type='FBFriendDisplayOrdering' type='i'/>
+</method>
+<method selector='fieldsForRequest'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder*' name='aDecoder' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithNibName:bundle:'>
+<arg declared_type='NSString*' name='nibNameOrNil' index='0' type='@'/>
+<arg declared_type='NSBundle*' name='nibBundleOrNil' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='itemPicturesEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='selection'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method selector='setAllowsMultipleSelection:'>
+<arg declared_type='BOOL' name='allowsMultipleSelection' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayOrdering:'>
+<arg declared_type='FBFriendDisplayOrdering' name='displayOrdering' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFieldsForRequest:'>
+<arg declared_type='NSSet*' name='fieldsForRequest' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setItemPicturesEnabled:'>
+<arg declared_type='BOOL' name='itemPicturesEnabled' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSession:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSortOrdering:'>
+<arg declared_type='FBFriendSortOrdering' name='sortOrdering' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpinner:'>
+<arg declared_type='UIActivityIndicatorView*' name='spinner' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTableView:'>
+<arg declared_type='UITableView*' name='tableView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserID:'>
+<arg declared_type='NSString*' name='userID' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sortOrdering'>
+<retval declared_type='FBFriendSortOrdering' type='i'/>
+</method>
+<method selector='spinner'>
+<retval declared_type='UIActivityIndicatorView*' type='@'/>
+</method>
+<method selector='tableView'>
+<retval declared_type='UITableView*' type='@'/>
+</method>
+<method selector='updateView'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='FBGraphObject'>
+<method class_method='true' selector='graphObject'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='graphObjectWrappingDictionary:'>
+<arg declared_type='NSDictionary*' name='jsonDictionary' index='0' type='@'/>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='isGraphObjectID:sameAs:'>
+<arg declared_type='id' name='anObject' index='0' type='@'/>
+<arg declared_type='id' name='anotherObject' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='FBLoginView'>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithPermissions:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='permissions'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPermissions:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStyle:'>
+<arg declared_type='FBLoginViewStyle' name='style' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='style'>
+<retval declared_type='FBLoginViewStyle' type='i'/>
+</method>
+</class>
+<class name='FBPlacePickerViewController'>
+<method class_method='true' selector='cacheDescriptorWithLocationCoordinate:radiusInMeters:searchText:resultsLimit:fieldsForRequest:'>
+<arg declared_type='CLLocationCoordinate2D' name='locationCoordinate' index='0' type='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type='NSInteger' name='radiusInMeters' index='1' type='i'/>
+<arg declared_type='NSString*' name='searchText' index='2' type='@'/>
+<arg declared_type='NSInteger' name='resultsLimit' index='3' type='i'/>
+<arg declared_type='NSSet*' name='fieldsForRequest' index='4' type='@'/>
+<retval declared_type='FBCacheDescriptor*' type='@'/>
+</method>
+<method selector='configureUsingCachedDescriptor:'>
+<arg declared_type='FBCacheDescriptor*' name='cacheDescriptor' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='fieldsForRequest'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder*' name='aDecoder' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithNibName:bundle:'>
+<arg declared_type='NSString*' name='nibNameOrNil' index='0' type='@'/>
+<arg declared_type='NSBundle*' name='nibBundleOrNil' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='itemPicturesEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='locationCoordinate'>
+<retval declared_type='CLLocationCoordinate2D' type='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='radiusInMeters'>
+<retval declared_type='NSInteger' type='i'/>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type='NSInteger' type='i'/>
+</method>
+<method selector='searchText'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='selection'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' name='delegate' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFieldsForRequest:'>
+<arg declared_type='NSSet*' name='fieldsForRequest' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setItemPicturesEnabled:'>
+<arg declared_type='BOOL' name='itemPicturesEnabled' index='0' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocationCoordinate:'>
+<arg declared_type='CLLocationCoordinate2D' name='locationCoordinate' index='0' type='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadiusInMeters:'>
+<arg declared_type='NSInteger' name='radiusInMeters' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type='NSInteger' name='resultsLimit' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSearchText:'>
+<arg declared_type='NSString*' name='searchText' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSession:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpinner:'>
+<arg declared_type='UIActivityIndicatorView*' name='spinner' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTableView:'>
+<arg declared_type='UITableView*' name='tableView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='spinner'>
+<retval declared_type='UIActivityIndicatorView*' type='@'/>
+</method>
+<method selector='tableView'>
+<retval declared_type='UITableView*' type='@'/>
+</method>
+</class>
+<class name='FBProfilePictureView'>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithUserID:pictureCropping:'>
+<arg declared_type='NSString*' name='userID' index='0' type='@'/>
+<arg declared_type='FBProfilePictureCropping' name='pictureCropping' index='1' type='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='pictureCropping'>
+<retval declared_type='FBProfilePictureCropping' type='i'/>
+</method>
+<method selector='setPictureCropping:'>
+<arg declared_type='FBProfilePictureCropping' name='pictureCropping' index='0' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserID:'>
+<arg declared_type='NSString*' name='userID' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='FBRequest'>
+<method selector='HTTPMethod'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='graphObject'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='graphPath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initForPostWithSession:graphPath:graphObject:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<arg declared_type='NSString*' name='graphPath' index='1' type='@'/>
+<arg declared_type='id' name='graphObject' index='2' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithSession:graphPath:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<arg declared_type='NSString*' name='graphPath' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithSession:graphPath:parameters:HTTPMethod:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<arg declared_type='NSString*' name='graphPath' index='1' type='@'/>
+<arg declared_type='NSDictionary*' name='parameters' index='2' type='@'/>
+<arg declared_type='NSString*' name='HTTPMethod' index='3' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithSession:restMethod:parameters:HTTPMethod:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<arg declared_type='NSString*' name='restMethod' index='1' type='@'/>
+<arg declared_type='NSDictionary*' name='parameters' index='2' type='@'/>
+<arg declared_type='NSString*' name='HTTPMethod' index='3' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='parameters'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method class_method='true' selector='requestForGraphPath:'>
+<arg declared_type='NSString*' name='graphPath' index='0' type='@'/>
+<retval declared_type='FBRequest*' type='@'/>
+</method>
+<method class_method='true' selector='requestForMe'>
+<retval declared_type='FBRequest*' type='@'/>
+</method>
+<method class_method='true' selector='requestForMyFriends'>
+<retval declared_type='FBRequest*' type='@'/>
+</method>
+<method class_method='true' selector='requestForPlacesSearchAtCoordinate:radiusInMeters:resultsLimit:searchText:'>
+<arg declared_type='CLLocationCoordinate2D' name='coordinate' index='0' type='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type='NSInteger' name='radius' index='1' type='i'/>
+<arg declared_type='NSInteger' name='limit' index='2' type='i'/>
+<arg declared_type='NSString*' name='searchText' index='3' type='@'/>
+<retval declared_type='FBRequest*' type='@'/>
+</method>
+<method class_method='true' selector='requestForUploadPhoto:'>
+<arg declared_type='UIImage*' name='photo' index='0' type='@'/>
+<retval declared_type='FBRequest*' type='@'/>
+</method>
+<method selector='restMethod'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method selector='setGraphObject:'>
+<arg declared_type='id' name='graphObject' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGraphPath:'>
+<arg declared_type='NSString*' name='graphPath' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHTTPMethod:'>
+<arg declared_type='NSString*' name='HTTPMethod' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRestMethod:'>
+<arg declared_type='NSString*' name='restMethod' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSession:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='startForPostWithGraphPath:graphObject:completionHandler:'>
+<arg declared_type='NSString*' name='graphPath' index='0' type='@'/>
+<arg declared_type='id' name='graphObject' index='1' type='@'/>
+<arg declared_type='FBRequestHandler' function_pointer='true' name='handler' index='2' type='@?'>
+<arg declared_type='FBRequestConnection*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='FBRequestConnection*' type='@'/>
+</method>
+<method selector='startWithCompletionHandler:'>
+<arg declared_type='FBRequestHandler' function_pointer='true' name='handler' index='0' type='@?'>
+<arg declared_type='FBRequestConnection*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='FBRequestConnection*' type='@'/>
+</method>
+<method class_method='true' selector='startWithGraphPath:completionHandler:'>
+<arg declared_type='NSString*' name='graphPath' index='0' type='@'/>
+<arg declared_type='FBRequestHandler' function_pointer='true' name='handler' index='1' type='@?'>
+<arg declared_type='FBRequestConnection*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='FBRequestConnection*' type='@'/>
+</method>
+<method class_method='true' selector='startWithGraphPath:parameters:HTTPMethod:completionHandler:'>
+<arg declared_type='NSString*' name='graphPath' index='0' type='@'/>
+<arg declared_type='NSDictionary*' name='parameters' index='1' type='@'/>
+<arg declared_type='NSString*' name='HTTPMethod' index='2' type='@'/>
+<arg declared_type='FBRequestHandler' function_pointer='true' name='handler' index='3' type='@?'>
+<arg declared_type='FBRequestConnection*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='FBRequestConnection*' type='@'/>
+</method>
+</class>
+<class name='FBRequestConnection'>
+<method selector='addRequest:completionHandler:'>
+<arg declared_type='FBRequest*' name='request' index='0' type='@'/>
+<arg declared_type='FBRequestHandler' function_pointer='true' name='handler' index='1' type='@?'>
+<arg declared_type='FBRequestConnection*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addRequest:completionHandler:batchEntryName:'>
+<arg declared_type='FBRequest*' name='request' index='0' type='@'/>
+<arg declared_type='FBRequestHandler' function_pointer='true' name='handler' index='1' type='@?'>
+<arg declared_type='FBRequestConnection*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='NSString*' name='name' index='2' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithTimeout:'>
+<arg declared_type='NSTimeInterval' name='timeout' index='0' type='d'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setUrlRequest:'>
+<arg declared_type='NSMutableURLRequest*' name='urlRequest' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='urlRequest'>
+<retval declared_type='NSMutableURLRequest*' type='@'/>
+</method>
+<method selector='urlResponse'>
+<retval declared_type='NSHTTPURLResponse*' type='@'/>
+</method>
+</class>
+<class name='FBSession'>
+<method selector='accessToken'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='activeSession'>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method selector='appID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='close'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='closeAndClearTokenInformation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='defaultAppID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='expirationDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='handleOpenURL:'>
+<arg declared_type='NSURL*' name='url' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:permissions:urlSchemeSuffix:tokenCacheStrategy:'>
+<arg declared_type='NSString*' name='appID' index='0' type='@'/>
+<arg declared_type='NSArray*' name='permissions' index='1' type='@'/>
+<arg declared_type='NSString*' name='urlSchemeSuffix' index='2' type='@'/>
+<arg declared_type='FBSessionTokenCachingStrategy*' name='tokenCachingStrategy' index='3' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithPermissions:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isOpen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='loggingBehavior'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='openWithBehavior:completionHandler:'>
+<arg declared_type='FBSessionLoginBehavior' name='behavior' index='0' type='i'/>
+<arg declared_type='FBSessionStateHandler' function_pointer='true' name='handler' index='1' type='@?'>
+<arg declared_type='FBSession*' type='@'/>
+<arg declared_type='FBSessionState' type='i'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='openWithCompletionHandler:'>
+<arg declared_type='FBSessionStateHandler' function_pointer='true' name='handler' index='0' type='@?'>
+<arg declared_type='FBSession*' type='@'/>
+<arg declared_type='FBSessionState' type='i'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='permissions'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='reauthorizeWithPermissions:behavior:completionHandler:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<arg declared_type='FBSessionLoginBehavior' name='behavior' index='1' type='i'/>
+<arg declared_type='FBSessionReauthorizeResultHandler' function_pointer='true' name='handler' index='2' type='@?'>
+<arg declared_type='FBSession*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sessionOpen'>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method class_method='true' selector='sessionOpenWithPermissions:completionHandler:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<arg declared_type='FBSessionStateHandler' function_pointer='true' name='handler' index='1' type='@?'>
+<arg declared_type='FBSession*' type='@'/>
+<arg declared_type='FBSessionState' type='i'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method class_method='true' selector='setActiveSession:'>
+<arg declared_type='FBSession*' name='session' index='0' type='@'/>
+<retval declared_type='FBSession*' type='@'/>
+</method>
+<method class_method='true' selector='setDefaultAppID:'>
+<arg declared_type='NSString*' name='appID' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setLoggingBehavior:'>
+<arg declared_type='NSSet*' name='loggingBehavior' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state'>
+<retval declared_type='FBSessionState' type='i'/>
+</method>
+<method selector='urlSchemeSuffix'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='FBSessionTokenCachingStrategy'>
+<method selector='cacheTokenInformation:'>
+<arg declared_type='NSDictionary*' name='tokenInformation' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearToken:'>
+<arg declared_type='NSString*' name='token' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='defaultInstance'>
+<retval declared_type='FBSessionTokenCachingStrategy*' type='@'/>
+</method>
+<method selector='fetchTokenInformation'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithUserDefaultTokenInformationKeyName:'>
+<arg declared_type='NSString*' name='tokenInformationKeyName' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='isValidTokenInformation:'>
+<arg declared_type='NSDictionary*' name='tokenInformation' index='0' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='FBTestSession'>
+<method selector='appAccessToken'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='sessionWithPrivateUserWithPermissions:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='sessionWithSharedUserWithPermissions:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='sessionWithSharedUserWithPermissions:uniqueUserTag:'>
+<arg declared_type='NSArray*' name='permissions' index='0' type='@'/>
+<arg declared_type='NSString*' name='uniqueUserTag' index='1' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='testAppID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='testAppSecret'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='testUserID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='application'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='birthday'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='category'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='city'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='comments'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='count'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='country'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='created_time'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='end_time'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='expires_time'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='first_name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='friendPickerViewController:handleError:'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<arg declared_type='NSError*' name='error' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='friendPickerViewController:shouldIncludeUser:'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<arg declared_type='id' name='user' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='friendPickerViewControllerDataDidChange:'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='friendPickerViewControllerSelectionDidChange:'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='from'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='id'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='image'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='keyEnumerator'>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='last_name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='latitude'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='likes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='link'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='location'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='loginViewFetchedUserInfo:user:'>
+<arg declared_type='FBLoginView*' name='loginView' index='0' type='@'/>
+<arg declared_type='id' name='user' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loginViewShowingLoggedInUser:'>
+<arg declared_type='FBLoginView*' name='loginView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loginViewShowingLoggedOutUser:'>
+<arg declared_type='FBLoginView*' name='loginView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='longitude'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='middle_name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='objectForKey:'>
+<arg declared_type='id' name='aKey' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='place'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='placePickerViewController:handleError:'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<arg declared_type='NSError*' name='error' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='placePickerViewController:shouldIncludePlace:'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<arg declared_type='id' name='place' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='placePickerViewControllerDataDidChange:'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='placePickerViewControllerSelectionDidChange:'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='publish_time'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='ref'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='removeObjectForKey:'>
+<arg declared_type='id' name='aKey' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setApplication:'>
+<arg declared_type='id' name='application' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBirthday:'>
+<arg declared_type='NSString*' name='birthday' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCategory:'>
+<arg declared_type='NSString*' name='category' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCity:'>
+<arg declared_type='NSString*' name='city' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setComments:'>
+<arg declared_type='NSArray*' name='comments' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCountry:'>
+<arg declared_type='NSString*' name='country' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCreated_time:'>
+<arg declared_type='NSString*' name='created_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnd_time:'>
+<arg declared_type='NSString*' name='end_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExpires_time:'>
+<arg declared_type='NSString*' name='expires_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFirst_name:'>
+<arg declared_type='NSString*' name='first_name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFrom:'>
+<arg declared_type='id' name='from' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setId:'>
+<arg declared_type='NSString*' name='id' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type='NSArray*' name='image' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLast_name:'>
+<arg declared_type='NSString*' name='last_name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLatitude:'>
+<arg declared_type='NSNumber*' name='latitude' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLikes:'>
+<arg declared_type='NSArray*' name='likes' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLink:'>
+<arg declared_type='NSString*' name='link' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocation:'>
+<arg declared_type='id' name='location' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLongitude:'>
+<arg declared_type='NSNumber*' name='longitude' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMiddle_name:'>
+<arg declared_type='NSString*' name='middle_name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg declared_type='id' name='anObject' index='0' type='@'/>
+<arg declared_type='id' name='aKey' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlace:'>
+<arg declared_type='id' name='place' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPublish_time:'>
+<arg declared_type='NSString*' name='publish_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRef:'>
+<arg declared_type='NSString*' name='ref' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStart_time:'>
+<arg declared_type='NSString*' name='start_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setState:'>
+<arg declared_type='NSString*' name='state' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStreet:'>
+<arg declared_type='NSString*' name='street' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTags:'>
+<arg declared_type='NSArray*' name='tags' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUser_message:'>
+<arg declared_type='NSString*' name='user_message' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsername:'>
+<arg declared_type='NSString*' name='username' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZip:'>
+<arg declared_type='NSString*' name='zip' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start_time'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='state'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='street'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='tags'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='user_message'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='username'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='zip'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<informal_protocol name='FBFriendPickerDelegate'>
+<method selector='friendPickerViewController:handleError:' type='v16@0:4@8@12'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<arg declared_type='NSError*' name='error' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='friendPickerViewController:shouldIncludeUser:' type='B16@0:4@8@12'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<arg declared_type='id' name='user' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='friendPickerViewControllerDataDidChange:' type='v12@0:4@8'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='friendPickerViewControllerSelectionDidChange:' type='v12@0:4@8'>
+<arg declared_type='FBFriendPickerViewController*' name='friendPicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBGraphLocation'>
+<method selector='city' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='country' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='latitude' type='@8@0:4'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='longitude' type='@8@0:4'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setCity:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='city' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCountry:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='country' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLatitude:' type='v12@0:4@8'>
+<arg declared_type='NSNumber*' name='latitude' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLongitude:' type='v12@0:4@8'>
+<arg declared_type='NSNumber*' name='longitude' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setState:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='state' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStreet:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='street' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZip:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='zip' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='street' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='zip' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBGraphObject'>
+<method selector='count' type='I8@0:4'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='keyEnumerator' type='@8@0:4'>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='objectForKey:' type='@12@0:4@8'>
+<arg declared_type='id' name='aKey' index='0' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='removeObjectForKey:' type='v12@0:4@8'>
+<arg declared_type='id' name='aKey' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:forKey:' type='v16@0:4@8@12'>
+<arg declared_type='id' name='anObject' index='0' type='@'/>
+<arg declared_type='id' name='aKey' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBGraphPlace'>
+<method selector='category' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='id' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='location' type='@8@0:4'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='name' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setCategory:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='category' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setId:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='id' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocation:' type='v12@0:4@8'>
+<arg declared_type='id' name='location' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBGraphUser'>
+<method selector='birthday' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='first_name' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='id' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='last_name' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='link' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='location' type='@8@0:4'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='middle_name' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='name' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setBirthday:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='birthday' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFirst_name:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='first_name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setId:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='id' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLast_name:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='last_name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLink:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='link' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocation:' type='v12@0:4@8'>
+<arg declared_type='id' name='location' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMiddle_name:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='middle_name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='name' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsername:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='username' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='username' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBLoginViewDelegate'>
+<method selector='loginViewFetchedUserInfo:user:' type='v16@0:4@8@12'>
+<arg declared_type='FBLoginView*' name='loginView' index='0' type='@'/>
+<arg declared_type='id' name='user' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loginViewShowingLoggedInUser:' type='v12@0:4@8'>
+<arg declared_type='FBLoginView*' name='loginView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loginViewShowingLoggedOutUser:' type='v12@0:4@8'>
+<arg declared_type='FBLoginView*' name='loginView' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBOpenGraphAction'>
+<method selector='application' type='@8@0:4'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='comments' type='@8@0:4'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='created_time' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='end_time' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='expires_time' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='from' type='@8@0:4'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='id' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='image' type='@8@0:4'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='likes' type='@8@0:4'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='place' type='@8@0:4'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='publish_time' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='ref' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setApplication:' type='v12@0:4@8'>
+<arg declared_type='id' name='application' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setComments:' type='v12@0:4@8'>
+<arg declared_type='NSArray*' name='comments' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCreated_time:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='created_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnd_time:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='end_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExpires_time:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='expires_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFrom:' type='v12@0:4@8'>
+<arg declared_type='id' name='from' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setId:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='id' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:' type='v12@0:4@8'>
+<arg declared_type='NSArray*' name='image' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLikes:' type='v12@0:4@8'>
+<arg declared_type='NSArray*' name='likes' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlace:' type='v12@0:4@8'>
+<arg declared_type='id' name='place' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPublish_time:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='publish_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRef:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='ref' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStart_time:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='start_time' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTags:' type='v12@0:4@8'>
+<arg declared_type='NSArray*' name='tags' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUser_message:' type='v12@0:4@8'>
+<arg declared_type='NSString*' name='user_message' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start_time' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='tags' type='@8@0:4'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='user_message' type='@8@0:4'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FBPlacePickerDelegate'>
+<method selector='placePickerViewController:handleError:' type='v16@0:4@8@12'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<arg declared_type='NSError*' name='error' index='1' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='placePickerViewController:shouldIncludePlace:' type='B16@0:4@8@12'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<arg declared_type='id' name='place' index='1' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='placePickerViewControllerDataDidChange:' type='v12@0:4@8'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='placePickerViewControllerSelectionDidChange:' type='v12@0:4@8'>
+<arg declared_type='FBPlacePickerViewController*' name='placePicker' index='0' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
