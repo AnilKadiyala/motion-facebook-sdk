@@ -12,7 +12,7 @@ What it covers:
 
 Objective-C reference (for comparison)
 ---------------------------------------
-For reference to the Objective-C version, please see https://github.com/damassi/Motion-FacebookSDK/tree/master/Objective-C-Version/HelloFacebookSample .  Make sure you're wearing your shades!
+For reference to the original Objective-C version, please see https://github.com/damassi/Motion-FacebookSDK/tree/master/Objective-C-Version/HelloFacebookSample .  Make sure you're wearing your shades!
 
 
 From Scratch Installation Steps (or, what I did to get it to work):
