@@ -5,7 +5,7 @@ class AppDelegate
   def application( application, openURL: url, sourceApplication: sourceApplication, annotation: annotation )
   #-----------------------------------------------------------
     # attempt to extract a token from the url
-    puts 'FIRING HERE SUCCESSFULLY'
+    
     return FBSession.activeSession.handleOpenURL( url )
   end
 

@@ -41,8 +41,7 @@ class HFViewController < UIViewController
 	    @profilePic = nil;
     end
 
-
-	def shouldAutorotateToInterfaceOrientation( interfaceOrientation )
+  def shouldAutorotateToInterfaceOrientation( interfaceOrientation )
 	    # Return YES for supported orientations
 	    if UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone
 	        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown)
@@ -55,7 +54,6 @@ class HFViewController < UIViewController
     	# first get the buttons set for login mode
 	    @buttonPostPhoto.enabled = true
 	    @buttonPostStatus.enabled = true
-	    
 	    @buttonPickFriends.enabled = true
 	end
 
@@ -64,11 +62,11 @@ class HFViewController < UIViewController
 	    # here we use helper properties of FBGraphUser to dot-through to first_name and
 	    # id properties of the json response from the server; alternatively we could use
 	    # NSDictionary methods such as objectForKey to get values from the my json object
-	    @labelFirstName.text = "Hello #{user.first_name}!"
+	    @labelFirstName.text = "Hello #{user[ :first_name ]}!"
 	    
 	    # setting the userID property of the FBProfilePictureView instance
 	    # causes the control to fetch and display the profile picture for the user
-	    @profilePic.userID = user.id
+	    @profilePic.userID = user[ :id ]
 	    @loggedInUser = user
 	end
  
@@ -87,24 +85,22 @@ class HFViewController < UIViewController
 	    # Post a status update to the user's feedm via the Graph API, and display an alert view 
 	    # with the results or an error.
 
-	    message = "Updating #{@loggedInUser.first_name}'s status at #{NSDate date}"
-	    params = { :message => "message" }
+	    message = "Updating #{@loggedInUser[ :first_name ]}'s status at #{NSDate.date}"
+	    params = { :message => message }
 	    
 	    # use the "startWith" helper static on FBRequest to both create and start a request, with
 	    # a specified completion handler.
 	    err = Pointer.new(:object)
 	    FBRequest.startWithGraphPath( "me/feed",
-			parameters:params,
-			HTTPMethod: "POST",
-	        completionHandler: lambda { |connection, result, error|
-	            self.showAlert( message, result: result, error: error )
-				@buttonPostStatus.enabled = true
-			
-			}
-		)
+				parameters:params,
+				HTTPMethod: "POST",
+		    completionHandler: lambda { |connection, result, error|
+					self.showAlert( message, result: result, error: error )
+					@buttonPostStatus.enabled = true
+				}
+			)
 	        
 	    @buttonPostStatus.enabled = false; 
-	
 	end
 
 	# Post Photo button handler
@@ -132,7 +128,7 @@ class HFViewController < UIViewController
  	def pickFriendsClick( sender )
 	    # Create friend picker, and get data loaded into it.
 	    friendPicker = FBFriendPickerViewController.alloc.init
-	    self.friendPickerController = friendPicker
+	    @friendPickerController = friendPicker
 	    
 	    friendPicker.loadData()
 	    
@@ -154,34 +150,34 @@ class HFViewController < UIViewController
 
 	# TODO validate this type @"<No Friends Selected>";
 	# TODO validate type id<FBGraphUser>
-
 	# Handler for when friend picker is dismissed
 	def friendPickerDoneButtonWasPressed( sender )
 
 	    self.navigationController.popViewControllerAnimated( true )
 	    
-	    if self.friendPickerController.selection.count == 0 
+	    if @friendPickerController.selection.count == 0 
 	        message = "<No Friends Selected>"
 	    else
 	        # we pick up the users from the selection, and create a string that we use to update the text view
 	        # at the bottom of the display; note that self.selection is a property inherited from our base class
-	        for user in self.friendPickerController.selection
-	            if text.length
+	        text = ''
+	        for user in @friendPickerController.selection
+	            if text.length > 1
 	                text.appendString( ", " )
 	            end
 
-	            text.appendString( user.name )
+	            text.appendString( user[ :name ] )
 	        end
 
 	        message = text
 	    end
 	    
 	    UIAlertView.alloc.initWithTitle( 
-	    	"You Picked:",
-			message: message,
-			delegate: nil,
-			cancelButtonTitle: "OK",
-			otherButtonTitles: nil).show()
+		    	"You Picked:",
+				message: message,
+				delegate: nil,
+				cancelButtonTitle: "OK",
+				otherButtonTitles: nil).show()
 	end
 
 	# UIAlertView helper for post buttons
