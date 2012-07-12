@@ -17,5 +17,5 @@ From Scratch Installation Steps (or, what I did to get it to work):
 2.  Navigate to `Documents/FacebookSDK` and copy `FBiOSSDK`, `Headers` and `Resources`
 3.  Create a `vendor/FacebookSDK3` folder in your RubyMotion project and paste the above in
 4.  Rename `FBiOSSDK` to `FBiOSSDK.a`
-5.  Edit your Rake file to include the necessary frameworks and libs and vendor_projects as seen in this projects sample Rake-file
+5.  Edit your Rake file to include the necessary frameworks and libs and vendor_projects as seen in this projects sample Rake
 6.  Done!  
