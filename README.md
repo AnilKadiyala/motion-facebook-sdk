@@ -1,3 +1,5 @@
+** This has been depreciated.  Please see http://gavinmorrice.com/blog/posts/30-how-to-use-the-facebook-ios-sdk-in-your-rubymotion-project for a better implementation! **
+
 iOS FacebookSDK (3.0 beta) for use with RubyMotion
 ==================================================
 
