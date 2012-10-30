@@ -1,6 +1,6 @@
 ** This has been depreciated.  Please see http://gavinmorrice.com/blog/posts/30-how-to-use-the-facebook-ios-sdk-in-your-rubymotion-project for a better implementation! **
 
-iOS FacebookSDK (3.0 beta) for use with RubyMotion
+iOS FacebookSDK (3.0) for use with RubyMotion
 ==================================================
 
 This example covers most basic Facebook functionality, and is a direct 1-1 port of the HelloFacebook Objective-C sample located in the FacebookSDK `samples` directory.  See https://developers.facebook.com/ios/ for more information.
